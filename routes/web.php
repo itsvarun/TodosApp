@@ -37,3 +37,19 @@ Route::delete('/todos/{todo}', 'TodosController@destroy')->name('todos.delete');
 // Route::get('/home', 'HomeController@index')->name('home');
 
 Route::redirect('/home', '/todos');
+
+
+Route::view('/vue', 'vue')->name('vue');
+
+Route::any('/any', function() {
+	return "any works";
+});
+
+Route::match(['GET', 'POST'], '/match', function() {
+	return "match works";
+});
+
+Route::get('/test', function() {
+	return App\User::select('id', 'name', 'email', 'created_at')->get();
+});
+

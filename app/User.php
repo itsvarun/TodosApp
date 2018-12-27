@@ -37,4 +37,13 @@ class User extends Authenticatable
         
         return $this->id == $model->user_id;
     }
+
+    public function generateApiToken() {
+
+        $this->api_token = str_random(60);
+        $this->save();
+
+        return $this->api_token;
+    }
+    
 }

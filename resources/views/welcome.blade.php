@@ -92,6 +92,7 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                     <a href="{{ route('todos.list') }}">Todos</a>
+                    <a href="{{ route('vue') }}">Vue</a>
                 </div>
             </div>
         </div>
