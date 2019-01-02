@@ -40,7 +40,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        
+
         app()->singleton('App\User', function () {
             return auth()->user();
         });

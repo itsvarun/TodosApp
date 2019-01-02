@@ -53,3 +53,16 @@ Route::get('/test', function() {
 	return App\User::select('id', 'name', 'email', 'created_at')->get();
 });
 
+// sample vue with axios
+
+Route::view('/vueapp', 'vueapp.app');
+
+Route::get('/skills', function () {
+    return ['Laravel', 'PHP', 'Vue', 'JavaScript', 'Testing'];
+});
+
+// projects
+
+Route::get('/projects', 'ProjectsController@index')->name('projects.index');
+Route::post('/projects', 'ProjectsController@store')->name('projects.create');
+Route::get('/projects/list', 'ProjectsController@list');
