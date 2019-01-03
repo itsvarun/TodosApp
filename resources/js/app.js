@@ -1,6 +1,7 @@
 import Form from './core/Form'
 import Vue from 'vue'
 import axios from 'axios'
+import Coupon from './components/Coupon'
 
 window.axios = axios
 window.Vue = Vue
@@ -8,12 +9,14 @@ window.Form = Form
 
 new Vue({
     el: '#app',
+    components: { Coupon },
     data: {
         projects: [],
         form: new Form({
             name: '',
             description: '',
         }),
+        coupon: ''
     },
 
     created() {
